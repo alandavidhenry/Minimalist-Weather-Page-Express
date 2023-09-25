@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+body {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.container {
+  background-color: #011f4b;
+  background-image: linear-gradient(320deg, #03396c 0%, #011f4b 60%);
+  color: #e6f0f7;
+  margin: 100px 50px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  min-height: 80vh;
+  text-align: center;
+  box-shadow: 15px 15px 20px 10px #0000009a;
+ 
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+input, button {
+  border: none;
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin: 10px 0px;
+  padding: 20px 35px 20px 25px;
+}
+
+input {
+  border-radius: 40px 0 0 40px;
+  background-color: #e6f0f7;
+  color: #696969;
+  font-weight: 100;
+}
+
+button {
+  background-color: #005b96;
+  color: white;
+  border-radius: 0 40px 40px 0;
+}
+
+button:hover {
+  background-color: #3f9fdf;
+  transition: background-color 0.2s ease;
+}
+
+button:active {
+  background-color: #005b96;
+  transition: background-color 0.05s ease;
+  transform: scale(1.02);
+  transition: transform 0.05s ease;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 70px 30px;
+    padding-top: 10px;
+  }
+
+  input, button {
+    font-size: 1.3rem;
+    margin: 10px 0px;
+    padding: 20px 35px 20px 25px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin: 50px 20px;
+    padding-top: 10px;
+    min-height: 90vh;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  input, button {
+    border-radius: 40px;
+    font-size: 1rem;
+    margin: 10px 0px;
+    padding: 15px 35px 15px 25px;
+    max-width: 70%;
+    align-self: center;
+  }
+
+  button:active {
+    transform: scale(1);
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  img {
+    width: 200px;
+  }
+  
+  p {
+    font-size: 1.3rem;
+  }
+}
