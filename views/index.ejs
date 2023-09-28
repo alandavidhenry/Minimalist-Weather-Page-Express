@@ -4,25 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/style.css">
-  <script type="text/javascript" src="api.js"></script>
   <title>Current Weather</title>
 </head>
 <body>
 
   <div class="container">
-    <h1><%=title%></h1>
+    <h1><%= title %></h1>
 
     <div class="form">
-        <input type="text" id="city" name="city" placeholder="Enter a city">
-        <button id="get-weather">Get weather</button>
+      <form action="/" method="POST">
+        <input name="city" type="text" id="city" placeholder="Enter a city">
+        <button type="submit" id="get-weather">Get weather</button>
+      </form>
     </div>
     
-    <h2></h2>
+    <% if (weather !== null) { %>
 
-    <img src="/images/icons/cloudy.png" alt="">
+      <h2><%= location %></h2>
 
-    <p class="condition"></p>
-    <p class="temp"></p>
+      <img src="/images/icons/<%= icon %>.png" alt="">
+
+      <p class="condition"><%= condition %></p>
+      <p class="temp"><%= temp %>&deg;C</p>
+      
+    <% } %>
 
   </div>
 
